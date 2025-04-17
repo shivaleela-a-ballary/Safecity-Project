@@ -11,7 +11,7 @@ API_KEY = "bf512b9c14514f72817d9f7155eb7f5b"  # replace with your real key
 def get_crime_news():
     district = request.args.get("district", "Karnataka")
     query = f"crime {district}"
-    url = f"https://newsapi.org/v2/everything?q={query}&apiKey={API_KEY}&pageSize=5&language=en"
+    url = f"https://newsapi.org/v2/everything?q={query}&apiKey={bf512b9c14514f72817d9f7155eb7f5b}&pageSize=5&language=en"
 
     try:
         response = requests.get(url)
