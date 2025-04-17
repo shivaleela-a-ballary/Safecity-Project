@@ -1,0 +1,21 @@
+{
+  "district": "KODAGU 0ORFEOANCNEOEOOO0O0O0OE0EO\u00c2\u00b00O N DN",
+  "location": [
+    NaN,
+    NaN
+  ],
+  "totals_by_year": {
+    "2023": 0.0
+  },
+  "top_crimes": [
+    "murder",
+    "rape",
+    "kidnapping"
+  ],
+  "trend": [
+    {
+      "year": 2023,
+      "total": 0
+    }
+  ]
+}

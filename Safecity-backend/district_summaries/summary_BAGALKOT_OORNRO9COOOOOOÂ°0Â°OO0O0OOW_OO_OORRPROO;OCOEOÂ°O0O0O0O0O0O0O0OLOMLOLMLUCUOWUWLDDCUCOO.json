@@ -1,0 +1,21 @@
+{
+  "district": "BAGALKOT OORNRO9COOOOOO\u00c2\u00b00\u00c2\u00b0OO0O0OOW OO OORRPROO;OCOEO\u00c2\u00b0O0O0O0O0O0O0O0OLOMLOLMLUCUOWUWLDDCUCOO",
+  "location": [
+    NaN,
+    NaN
+  ],
+  "totals_by_year": {
+    "2023": 0.0
+  },
+  "top_crimes": [
+    "murder",
+    "rape",
+    "kidnapping"
+  ],
+  "trend": [
+    {
+      "year": 2023,
+      "total": 0
+    }
+  ]
+}

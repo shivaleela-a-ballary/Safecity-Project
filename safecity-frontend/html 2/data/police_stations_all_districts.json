@@ -1,0 +1,650 @@
+[
+  {
+    "name": "BELAGAVI Police Station 1",
+    "district": "BELAGAVI",
+    "lat": 15.853183,
+    "lng": 74.48241
+  },
+  {
+    "name": "BELAGAVI Police Station 2",
+    "district": "BELAGAVI",
+    "lat": 15.949174,
+    "lng": 74.550793
+  },
+  {
+    "name": "BELAGAVI Police Station 3",
+    "district": "BELAGAVI",
+    "lat": 15.84846,
+    "lng": 74.5031
+  },
+  {
+    "name": "BELAGAVI Police Station 4",
+    "district": "BELAGAVI",
+    "lat": 15.78999,
+    "lng": 74.453342
+  },
+  {
+    "name": "BELAGAVI Police Station 5",
+    "district": "BELAGAVI",
+    "lat": 15.903009,
+    "lng": 74.544186
+  },
+  {
+    "name": "BELAGAVI Police Station 6",
+    "district": "BELAGAVI",
+    "lat": 15.759792,
+    "lng": 74.534596
+  },
+  {
+    "name": "BENGALURU Police Station 1",
+    "district": "BENGALURU",
+    "lat": 13.009289,
+    "lng": 77.665821
+  },
+  {
+    "name": "BENGALURU Police Station 2",
+    "district": "BENGALURU",
+    "lat": 12.922705,
+    "lng": 77.613619
+  },
+  {
+    "name": "BENGALURU Police Station 3",
+    "district": "BENGALURU",
+    "lat": 12.933938,
+    "lng": 77.628398
+  },
+  {
+    "name": "BENGALURU Police Station 4",
+    "district": "BENGALURU",
+    "lat": 12.898018,
+    "lng": 77.535872
+  },
+  {
+    "name": "BENGALURU Police Station 5",
+    "district": "BENGALURU",
+    "lat": 12.971703,
+    "lng": 77.583738
+  },
+  {
+    "name": "BENGALURU Police Station 6",
+    "district": "BENGALURU",
+    "lat": 12.983411,
+    "lng": 77.525299
+  },
+  {
+    "name": "BALLARI Police Station 1",
+    "district": "BALLARI",
+    "lat": 15.068516,
+    "lng": 76.972737
+  },
+  {
+    "name": "BALLARI Police Station 2",
+    "district": "BALLARI",
+    "lat": 15.217674,
+    "lng": 76.918345
+  },
+  {
+    "name": "BALLARI Police Station 3",
+    "district": "BALLARI",
+    "lat": 15.20355,
+    "lng": 76.957897
+  },
+  {
+    "name": "BALLARI Police Station 4",
+    "district": "BALLARI",
+    "lat": 15.2363,
+    "lng": 76.90155
+  },
+  {
+    "name": "BALLARI Police Station 5",
+    "district": "BALLARI",
+    "lat": 15.086565,
+    "lng": 76.863176
+  },
+  {
+    "name": "BALLARI Police Station 6",
+    "district": "BALLARI",
+    "lat": 15.233707,
+    "lng": 76.93651
+  },
+  {
+    "name": "BIDAR Police Station 1",
+    "district": "BIDAR",
+    "lat": 17.813435,
+    "lng": 77.450788
+  },
+  {
+    "name": "BIDAR Police Station 2",
+    "district": "BIDAR",
+    "lat": 17.86368,
+    "lng": 77.557797
+  },
+  {
+    "name": "BIDAR Police Station 3",
+    "district": "BIDAR",
+    "lat": 17.92349,
+    "lng": 77.476331
+  },
+  {
+    "name": "BIDAR Police Station 4",
+    "district": "BIDAR",
+    "lat": 17.958539,
+    "lng": 77.471941
+  },
+  {
+    "name": "BIDAR Police Station 5",
+    "district": "BIDAR",
+    "lat": 18.00419,
+    "lng": 77.595905
+  },
+  {
+    "name": "BIDAR Police Station 6",
+    "district": "BIDAR",
+    "lat": 17.907757,
+    "lng": 77.564223
+  },
+  {
+    "name": "KALABURAGI Police Station 1",
+    "district": "KALABURAGI",
+    "lat": 17.347423,
+    "lng": 76.749457
+  },
+  {
+    "name": "KALABURAGI Police Station 2",
+    "district": "KALABURAGI",
+    "lat": 17.291226,
+    "lng": 76.874104
+  },
+  {
+    "name": "KALABURAGI Police Station 3",
+    "district": "KALABURAGI",
+    "lat": 17.320092,
+    "lng": 76.755118
+  },
+  {
+    "name": "KALABURAGI Police Station 4",
+    "district": "KALABURAGI",
+    "lat": 17.248067,
+    "lng": 76.770894
+  },
+  {
+    "name": "KALABURAGI Police Station 5",
+    "district": "KALABURAGI",
+    "lat": 17.398833,
+    "lng": 76.824135
+  },
+  {
+    "name": "KALABURAGI Police Station 6",
+    "district": "KALABURAGI",
+    "lat": 17.345038,
+    "lng": 76.790979
+  },
+  {
+    "name": "MYSURU Police Station 1",
+    "district": "MYSURU",
+    "lat": 12.321988,
+    "lng": 76.721008
+  },
+  {
+    "name": "MYSURU Police Station 2",
+    "district": "MYSURU",
+    "lat": 12.378571,
+    "lng": 76.596671
+  },
+  {
+    "name": "MYSURU Police Station 3",
+    "district": "MYSURU",
+    "lat": 12.359299,
+    "lng": 76.569091
+  },
+  {
+    "name": "MYSURU Police Station 4",
+    "district": "MYSURU",
+    "lat": 12.298557,
+    "lng": 76.683801
+  },
+  {
+    "name": "MYSURU Police Station 5",
+    "district": "MYSURU",
+    "lat": 12.203234,
+    "lng": 76.572539
+  },
+  {
+    "name": "MYSURU Police Station 6",
+    "district": "MYSURU",
+    "lat": 12.26834,
+    "lng": 76.710587
+  },
+  {
+    "name": "HASSAN Police Station 1",
+    "district": "HASSAN",
+    "lat": 12.930908,
+    "lng": 76.132774
+  },
+  {
+    "name": "HASSAN Police Station 2",
+    "district": "HASSAN",
+    "lat": 12.999494,
+    "lng": 76.0445
+  },
+  {
+    "name": "HASSAN Police Station 3",
+    "district": "HASSAN",
+    "lat": 12.961928,
+    "lng": 76.092461
+  },
+  {
+    "name": "HASSAN Police Station 4",
+    "district": "HASSAN",
+    "lat": 12.953738,
+    "lng": 76.080008
+  },
+  {
+    "name": "HASSAN Police Station 5",
+    "district": "HASSAN",
+    "lat": 13.0957,
+    "lng": 76.195228
+  },
+  {
+    "name": "HASSAN Police Station 6",
+    "district": "HASSAN",
+    "lat": 13.013053,
+    "lng": 76.085631
+  },
+  {
+    "name": "TUMAKURU Police Station 1",
+    "district": "TUMAKURU",
+    "lat": 13.345756,
+    "lng": 77.179229
+  },
+  {
+    "name": "TUMAKURU Police Station 2",
+    "district": "TUMAKURU",
+    "lat": 13.421739,
+    "lng": 77.187546
+  },
+  {
+    "name": "TUMAKURU Police Station 3",
+    "district": "TUMAKURU",
+    "lat": 13.401398,
+    "lng": 77.141238
+  },
+  {
+    "name": "TUMAKURU Police Station 4",
+    "district": "TUMAKURU",
+    "lat": 13.409584,
+    "lng": 77.061509
+  },
+  {
+    "name": "TUMAKURU Police Station 5",
+    "district": "TUMAKURU",
+    "lat": 13.309216,
+    "lng": 77.032059
+  },
+  {
+    "name": "TUMAKURU Police Station 6",
+    "district": "TUMAKURU",
+    "lat": 13.289084,
+    "lng": 77.154215
+  },
+  {
+    "name": "RAICHUR Police Station 1",
+    "district": "RAICHUR",
+    "lat": 16.237236,
+    "lng": 77.266117
+  },
+  {
+    "name": "RAICHUR Police Station 2",
+    "district": "RAICHUR",
+    "lat": 16.280014,
+    "lng": 77.276486
+  },
+  {
+    "name": "RAICHUR Police Station 3",
+    "district": "RAICHUR",
+    "lat": 16.219799,
+    "lng": 77.254843
+  },
+  {
+    "name": "RAICHUR Police Station 4",
+    "district": "RAICHUR",
+    "lat": 16.113496,
+    "lng": 77.315075
+  },
+  {
+    "name": "RAICHUR Police Station 5",
+    "district": "RAICHUR",
+    "lat": 16.238304,
+    "lng": 77.440598
+  },
+  {
+    "name": "RAICHUR Police Station 6",
+    "district": "RAICHUR",
+    "lat": 16.182475,
+    "lng": 77.449297
+  },
+  {
+    "name": "CHITRADURGA Police Station 1",
+    "district": "CHITRADURGA",
+    "lat": 14.139435,
+    "lng": 76.440883
+  },
+  {
+    "name": "CHITRADURGA Police Station 2",
+    "district": "CHITRADURGA",
+    "lat": 14.206397,
+    "lng": 76.364558
+  },
+  {
+    "name": "CHITRADURGA Police Station 3",
+    "district": "CHITRADURGA",
+    "lat": 14.178822,
+    "lng": 76.435894
+  },
+  {
+    "name": "CHITRADURGA Police Station 4",
+    "district": "CHITRADURGA",
+    "lat": 14.134804,
+    "lng": 76.433239
+  },
+  {
+    "name": "CHITRADURGA Police Station 5",
+    "district": "CHITRADURGA",
+    "lat": 14.322563,
+    "lng": 76.347325
+  },
+  {
+    "name": "CHITRADURGA Police Station 6",
+    "district": "CHITRADURGA",
+    "lat": 14.243251,
+    "lng": 76.457708
+  },
+  {
+    "name": "DHARWAD Police Station 1",
+    "district": "DHARWAD",
+    "lat": 15.415061,
+    "lng": 74.914421
+  },
+  {
+    "name": "DHARWAD Police Station 2",
+    "district": "DHARWAD",
+    "lat": 15.554925,
+    "lng": 74.998624
+  },
+  {
+    "name": "DHARWAD Police Station 3",
+    "district": "DHARWAD",
+    "lat": 15.382197,
+    "lng": 74.919842
+  },
+  {
+    "name": "DHARWAD Police Station 4",
+    "district": "DHARWAD",
+    "lat": 15.518807,
+    "lng": 75.075868
+  },
+  {
+    "name": "DHARWAD Police Station 5",
+    "district": "DHARWAD",
+    "lat": 15.559985,
+    "lng": 75.011348
+  },
+  {
+    "name": "DHARWAD Police Station 6",
+    "district": "DHARWAD",
+    "lat": 15.528311,
+    "lng": 74.922301
+  },
+  {
+    "name": "VIJAYAPURA Police Station 1",
+    "district": "VIJAYAPURA",
+    "lat": 16.828301,
+    "lng": 75.632831
+  },
+  {
+    "name": "VIJAYAPURA Police Station 2",
+    "district": "VIJAYAPURA",
+    "lat": 16.731265,
+    "lng": 75.657136
+  },
+  {
+    "name": "VIJAYAPURA Police Station 3",
+    "district": "VIJAYAPURA",
+    "lat": 16.881349,
+    "lng": 75.802254
+  },
+  {
+    "name": "VIJAYAPURA Police Station 4",
+    "district": "VIJAYAPURA",
+    "lat": 16.793095,
+    "lng": 75.73204
+  },
+  {
+    "name": "VIJAYAPURA Police Station 5",
+    "district": "VIJAYAPURA",
+    "lat": 16.883546,
+    "lng": 75.728216
+  },
+  {
+    "name": "VIJAYAPURA Police Station 6",
+    "district": "VIJAYAPURA",
+    "lat": 16.764181,
+    "lng": 75.808356
+  },
+  {
+    "name": "SHIVAMOGGA Police Station 1",
+    "district": "SHIVAMOGGA",
+    "lat": 13.899431,
+    "lng": 75.626023
+  },
+  {
+    "name": "SHIVAMOGGA Police Station 2",
+    "district": "SHIVAMOGGA",
+    "lat": 14.01863,
+    "lng": 75.587467
+  },
+  {
+    "name": "SHIVAMOGGA Police Station 3",
+    "district": "SHIVAMOGGA",
+    "lat": 13.876211,
+    "lng": 75.633936
+  },
+  {
+    "name": "SHIVAMOGGA Police Station 4",
+    "district": "SHIVAMOGGA",
+    "lat": 13.937487,
+    "lng": 75.568881
+  },
+  {
+    "name": "SHIVAMOGGA Police Station 5",
+    "district": "SHIVAMOGGA",
+    "lat": 13.855855,
+    "lng": 75.585527
+  },
+  {
+    "name": "SHIVAMOGGA Police Station 6",
+    "district": "SHIVAMOGGA",
+    "lat": 13.983363,
+    "lng": 75.524818
+  },
+  {
+    "name": "MANDYA Police Station 1",
+    "district": "MANDYA",
+    "lat": 12.42149,
+    "lng": 76.939045
+  },
+  {
+    "name": "MANDYA Police Station 2",
+    "district": "MANDYA",
+    "lat": 12.502516,
+    "lng": 76.885932
+  },
+  {
+    "name": "MANDYA Police Station 3",
+    "district": "MANDYA",
+    "lat": 12.57553,
+    "lng": 76.903147
+  },
+  {
+    "name": "MANDYA Police Station 4",
+    "district": "MANDYA",
+    "lat": 12.5336,
+    "lng": 76.815577
+  },
+  {
+    "name": "MANDYA Police Station 5",
+    "district": "MANDYA",
+    "lat": 12.492583,
+    "lng": 76.95107
+  },
+  {
+    "name": "MANDYA Police Station 6",
+    "district": "MANDYA",
+    "lat": 12.584839,
+    "lng": 76.96709
+  },
+  {
+    "name": "KOLAR Police Station 1",
+    "district": "KOLAR",
+    "lat": 13.132281,
+    "lng": 78.099189
+  },
+  {
+    "name": "KOLAR Police Station 2",
+    "district": "KOLAR",
+    "lat": 13.154164,
+    "lng": 78.088003
+  },
+  {
+    "name": "KOLAR Police Station 3",
+    "district": "KOLAR",
+    "lat": 13.171812,
+    "lng": 78.185317
+  },
+  {
+    "name": "KOLAR Police Station 4",
+    "district": "KOLAR",
+    "lat": 13.2209,
+    "lng": 78.047357
+  },
+  {
+    "name": "KOLAR Police Station 5",
+    "district": "KOLAR",
+    "lat": 13.196528,
+    "lng": 78.137545
+  },
+  {
+    "name": "KOLAR Police Station 6",
+    "district": "KOLAR",
+    "lat": 13.097714,
+    "lng": 78.174178
+  },
+  {
+    "name": "CHIKKABALLAPUR Police Station 1",
+    "district": "CHIKKABALLAPUR",
+    "lat": 13.499722,
+    "lng": 77.668358
+  },
+  {
+    "name": "CHIKKABALLAPUR Police Station 2",
+    "district": "CHIKKABALLAPUR",
+    "lat": 13.417001,
+    "lng": 77.776803
+  },
+  {
+    "name": "CHIKKABALLAPUR Police Station 3",
+    "district": "CHIKKABALLAPUR",
+    "lat": 13.351304,
+    "lng": 77.753477
+  },
+  {
+    "name": "CHIKKABALLAPUR Police Station 4",
+    "district": "CHIKKABALLAPUR",
+    "lat": 13.407587,
+    "lng": 77.747264
+  },
+  {
+    "name": "CHIKKABALLAPUR Police Station 5",
+    "district": "CHIKKABALLAPUR",
+    "lat": 13.330226,
+    "lng": 77.774354
+  },
+  {
+    "name": "CHIKKABALLAPUR Police Station 6",
+    "district": "CHIKKABALLAPUR",
+    "lat": 13.42407,
+    "lng": 77.725936
+  },
+  {
+    "name": "HAVERI Police Station 1",
+    "district": "HAVERI",
+    "lat": 14.763713,
+    "lng": 75.472766
+  },
+  {
+    "name": "HAVERI Police Station 2",
+    "district": "HAVERI",
+    "lat": 14.738631,
+    "lng": 75.431805
+  },
+  {
+    "name": "HAVERI Police Station 3",
+    "district": "HAVERI",
+    "lat": 14.78897,
+    "lng": 75.358226
+  },
+  {
+    "name": "HAVERI Police Station 4",
+    "district": "HAVERI",
+    "lat": 14.841917,
+    "lng": 75.398097
+  },
+  {
+    "name": "HAVERI Police Station 5",
+    "district": "HAVERI",
+    "lat": 14.770266,
+    "lng": 75.493556
+  },
+  {
+    "name": "HAVERI Police Station 6",
+    "district": "HAVERI",
+    "lat": 14.892634,
+    "lng": 75.433954
+  },
+  {
+    "name": "YADGIR Police Station 1",
+    "district": "YADGIR",
+    "lat": 16.718484,
+    "lng": 77.101089
+  },
+  {
+    "name": "YADGIR Police Station 2",
+    "district": "YADGIR",
+    "lat": 16.787155,
+    "lng": 77.220327
+  },
+  {
+    "name": "YADGIR Police Station 3",
+    "district": "YADGIR",
+    "lat": 16.730267,
+    "lng": 77.061298
+  },
+  {
+    "name": "YADGIR Police Station 4",
+    "district": "YADGIR",
+    "lat": 16.828735,
+    "lng": 77.057468
+  },
+  {
+    "name": "YADGIR Police Station 5",
+    "district": "YADGIR",
+    "lat": 16.799704,
+    "lng": 77.038838
+  },
+  {
+    "name": "YADGIR Police Station 6",
+    "district": "YADGIR",
+    "lat": 16.830915,
+    "lng": 77.030713
+  }
+]

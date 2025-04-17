@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crime Heatmap</title>
+
+  <!-- Styles and Map Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 400px;
+      background: #1e1e2f;
+      color: white;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .map-area {
+      flex: 1;
+      position: relative;
+    }
+    .legend {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    .legend-bar {
+      height: 10px;
+      width: 200px;
+      background: linear-gradient(to right, green, yellow, red);
+      margin: 5px 0;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+    .btn-container {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+    .btn-container button {
+      margin: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      
+      <h2>Filters</h2>
+      <h3 style="margin-top: 20px;">Top 5 Crime Districts (2023)</h3>
+      <ul id="top-districts" style="list-style: none; padding-left: 0;"></ul>
+
+      
+    </div>
+
+    <div class="map-area">
+      <div id="map"></div>
+      <div class="btn-container">
+        <button id="toggleHeatmap" class="btn btn-warning btn-sm">Toggle Heatmap</button>
+        <button id="toggleStations" class="btn btn-primary btn-sm">Toggle Stations</button>
+      </div>
+      <div class="legend">
+        <strong>Crime Intensity</strong>
+        <div class="legend-bar"></div>
+        <div style="display: flex; justify-content: space-between;">
+          <span>Low</span><span>High</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    let map = L.map('map').setView([15.5, 75.0], 7);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+    }).addTo(map);
+
+    let heatLayer, stationLayer = L.layerGroup();
+
+    // Load heatmap data
+    fetch("data/heatmap_data.json")
+      .then(res => res.json())
+      .then(data => {
+        const heatPoints = data.map(p => [p.lat, p.lng, p.weight]);
+        heatLayer = L.heatLayer(heatPoints, { radius: 25 }).addTo(map);
+      });
+
+    // Load police stations
+    fetch("data/police_stations_all_districts.json")
+      .then(res => res.json())
+      .then(stations => {
+        stations.forEach(station => {
+          const marker = L.marker([station.lat, station.lng])
+            .bindPopup(`<strong>${station.name}</strong><br>${station.district}`);
+          stationLayer.addLayer(marker);
+        });
+        stationLayer.addTo(map);
+      });
+
+    // Toggle buttons
+    document.getElementById("toggleHeatmap").addEventListener("click", () => {
+      if (map.hasLayer(heatLayer)) {
+        map.removeLayer(heatLayer);
+      } else {
+        map.addLayer(heatLayer);
+      }
+    });
+
+    document.getElementById("toggleStations").addEventListener("click", () => {
+      if (map.hasLayer(stationLayer)) {
+        map.removeLayer(stationLayer);
+      } else {
+        map.addLayer(stationLayer);
+      }
+    });
+
+    // User location
+    const lat = 15.85;
+    const lon = 74.5;
+    L.marker([lat, lon]).addTo(map).bindPopup("📍 Simulated Location").openPopup();
+    map.setView([lat, lon], 10);
+
+
+    // Load top 5 districts
+    fetch("data/top_crime_districts.json")
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById("top-districts");
+        data["2023"].forEach(d => {
+          const li = document.createElement("li");
+          li.textContent = `${d.district} - ${d.total} cases`;
+          list.appendChild(li);
+        });
+      });
+
+    // Chart.js crime chart
+    let chart;
+    function handleCrimeSearch() {
+      const district = document.getElementById("district").value;
+      const startYear = document.getElementById("start-year").value;
+      const endYear = document.getElementById("end-year").value;
+
+      if (!district || !startYear || !endYear) {
+        alert("Please fill all fields.");
+        return;
+      }
+
+      fetch(`http://localhost:5000/search?district=${district}&start_year=${startYear}&end_year=${endYear}`)
+        .then(res => res.json())
+        .then(data => {
+          const years = data.map(d => d.year);
+          const counts = data.map(d => d.total_crimes_against_women);
+          const ctx = document.getElementById('crimeChart').getContext('2d');
+          if (chart) chart.destroy();
+          chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: years,
+              datasets: [{
+                label: `Crimes in ${district}`,
+                data: counts,
+                backgroundColor: 'rgba(255,99,132,0.6)'
+              }]
+            }
+          });
+        });
+    }
+  </script>
+</body>
+</html>

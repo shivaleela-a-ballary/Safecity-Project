@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crime Trends by District</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    canvas {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mb-4 text-center">📈 Crime Trends by District (Year-wise)</h2>
+    <canvas id="trendChart" height="400"></canvas>
+  </div>
+
+  <script>
+    async function loadTrendData() {
+      try {
+        const res = await fetch("data/crime_trends_by_district.json");
+        const data = await res.json();
+
+        const years = [...new Set(Object.values(data).flatMap(obj => Object.keys(obj)))].sort();
+        const datasets = Object.keys(data).map((district, index) => {
+          const color = `hsl(${index * 15 % 360}, 70%, 50%)`;
+          return {
+            label: district,
+            data: years.map(year => data[district][year] || 0),
+            borderColor: color,
+            backgroundColor: color,
+            tension: 0.3,
+            fill: false
+          };
+        });
+
+        const ctx = document.getElementById("trendChart").getContext("2d");
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: years,
+            datasets: datasets
+          },
+          options: {
+            responsive: true,
+            interaction: {
+              mode: 'index',
+              intersect: false
+            },
+            stacked: false,
+            plugins: {
+              title: {
+                display: false
+              },
+              legend: {
+                display: false
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Total Crimes Against Women'
+                }
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: 'Year'
+                }
+              }
+            }
+          }
+        });
+      } catch (err) {
+        console.error("Error loading trend data:", err);
+        alert("Failed to load crime trend data.");
+      }
+    }
+
+    loadTrendData();
+  </script>
+</body>
+</html>

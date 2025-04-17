@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | CrimeWatch</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9fb;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: #2c3e50;
+      animation: slideInLeft 0.7s ease forwards;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: border 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    .contact-form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #2980b9;
+    }
+
+    .support-email {
+      margin-top: 20px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About CrimeWatch</h1>
+    <nav>
+        <ul class="nav-links">
+          <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+          <li><a href="index2.html"><i class="fa-solid fa-map-location-dot"></i> Heatmap</a></li>
+          <li><a href="index3.html"><i class="fa-solid fa-arrow-trend-up"></i> Trends</a></li>
+          <li><a href="index4.html"><i class="fa-solid fa-building-circle-arrow-right"></i> Distribution</a></li>
+          <li><a href="index5.html"><i class="fa-solid fa-triangle-exclamation"></i> Alerts</a></li>
+          <li><a href="index6.html"><i class="fa-solid fa-address-card"></i> About</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <div class="container">
+    <section class="reveal">
+      <h2>App Purpose</h2>
+      <p>
+        CrimeWatch is designed to keep citizens informed about crime activity in their local area in real-time. 
+        It helps promote public safety by delivering timely alerts, visual crime trends, and neighborhood statistics.
+      </p>
+    </section>
+
+    <section class="reveal">
+      <h2>Data Sources</h2>
+      <p>
+        Our data is sourced from verified feeds including local police departments, open crime data APIs, and community reports.
+        We ensure high accuracy by filtering and cross-referencing inputs before displaying them.
+      </p>
+    </section>
+
+    <section class="reveal">
+      <h2>Safety Tips</h2>
+      <ul>
+        <li>Stay aware of your surroundings, especially during late hours.</li>
+        <li>Always lock your doors and secure valuables.</li>
+        <li>Report suspicious activity to your local authorities.</li>
+        <li>Use well-lit, populated routes when walking at night.</li>
+      </ul>
+    </section>
+
+    <section class="reveal">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="support-email">
+        Or email us directly at <a href="mailto:support@crimewatch.app">support@crimewatch.app</a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Animate on scroll
+    const sections = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.85;
+
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+
+        if (top < trigger) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>

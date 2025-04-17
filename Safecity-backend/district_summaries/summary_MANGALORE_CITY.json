@@ -1,0 +1,31 @@
+{
+  "district": "MANGALORE CITY",
+  "location": [
+    12.8698101,
+    74.8430082
+  ],
+  "totals_by_year": {
+    "2011": 0.0,
+    "2012": 0.0,
+    "2013": 0.0
+  },
+  "top_crimes": [
+    "cruelty",
+    "murder",
+    "rape"
+  ],
+  "trend": [
+    {
+      "year": 2011,
+      "total": 0
+    },
+    {
+      "year": 2012,
+      "total": 0
+    },
+    {
+      "year": 2013,
+      "total": 0
+    }
+  ]
+}

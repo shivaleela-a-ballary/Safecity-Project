@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Crime Alerts</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f5f6fa;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    .news-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .news-card h5 {
+      margin-bottom: 10px;
+    }
+    .news-card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mb-4 text-center">📰 Real-Time Crime News</h2>
+    <label for="districtSelect" class="form-label">Select District</label>
+    <select id="districtSelect" class="form-select mb-4">
+      <option selected disabled>Select district</option>
+      <option value="BELAGAVI">BELAGAVI</option>
+      <option value="BALLARI">BALLARI</option>
+      <option value="BIDAR">BIDAR</option>
+      <option value="BENGALURU">BENGALURU</option>
+      <option value="KARNATAKA">KARNATAKA</option>
+      <option value="INDIA">INDIA (All)</option>
+    </select>
+
+    <div id="newsContainer"></div>
+  </div>
+
+  <script>
+    document.getElementById('districtSelect').addEventListener('change', async function() {
+      const district = this.value;
+      const container = document.getElementById("newsContainer");
+      container.innerHTML = '<p>Loading news...</p>';
+
+      try {
+        const res = await fetch(`http://localhost:5000/live-news?district=${district}`);
+        const data = await res.json();
+
+        if (!Array.isArray(data)) throw new Error("Invalid response");
+
+        container.innerHTML = "";
+        data.forEach(article => {
+          const card = document.createElement("div");
+          card.className = "news-card";
+          card.innerHTML = `
+            <h5>${article.title}</h5>
+            <p>${article.summary || "No summary available."}</p>
+            <a href="${article.link}" target="_blank" class="btn btn-sm btn-primary">Read More</a>
+          `;
+          container.appendChild(card);
+        });
+
+        if (data.length === 0) {
+          container.innerHTML = '<p>No crime news found for this district.</p>';
+        }
+      } catch (err) {
+        container.innerHTML = `<p class="text-danger">Failed to load news: ${err.message}</p>`;
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

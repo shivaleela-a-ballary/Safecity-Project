@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SOS Alert</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; padding: 20px; text-align: center; }
+    button { padding: 1em; font-size: 18px; background: red; color: white; border: none; border-radius: 10px; }
+    .info { margin-top: 1em; color: #555; }
+  </style>
+</head>
+<body>
+  <h2>🚨 Emergency SOS</h2>
+  <p class="info">Tap to send your current location</p>
+  <button onclick="sendSOS()">Send SOS</button>
+  <p class="info" id="status"></p>
+
+  <script>
+    function sendSOS() {
+      document.getElementById("status").innerText = "Getting location...";
+
+      navigator.geolocation.getCurrentPosition(position => {
+        const data = {
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+          name: "Rahul",
+          timestamp: new Date().toISOString()
+        };
+
+        fetch("https://YOUR_PROJECT.cloudfunctions.net/sendSOS", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        })
+        .then(res => res.text())
+        .then(msg => document.getElementById("status").innerText = msg)
+        .catch(err => document.getElementById("status").innerText = "Error sending SOS.");
+      });
+    }
+  </script>
+</body>
+</html>
