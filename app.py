@@ -57,6 +57,42 @@ def stats():
         "years": sorted(df["year"].unique().tolist()),
         "districts": df["district"].nunique()
     })
+# 🔹 Live News API route
+# ========================
+
+NEWS_API_KEY = os.getenv("NEWS_API_KEY", "bf512b9c14514f72817d9f7155eb7f5b")
+
+@app.route("/live-news")
+def get_live_news():
+    district = request.args.get("district", "Karnataka")
+    query = f"crime {district}"
+
+    params = {
+        "q": query,
+        "language": "en",
+        "sortBy": "publishedAt",
+        "apiKey": bf512b9c14514f72817d9f7155eb7f5b,
+        "pageSize": 10,
+    }
+
+    try:
+        response = requests.get("https://newsapi.org/v2/everything", params=params)
+        data = response.json()
+
+        if data.get("status") != "ok":
+            return jsonify({"error": "Failed to fetch news", "detail": data}), 500
+
+        articles = data.get("articles", [])
+        news_items = [{
+            "title": a["title"],
+            "summary": a.get("description", ""),
+            "link": a["url"]
+        } for a in articles]
+
+        return jsonify(news_items)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 3000))
