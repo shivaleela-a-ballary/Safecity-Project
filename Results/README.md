@@ -1,20 +1,19 @@
 # 📸 SafeCity Project Screenshots
 
-Beautiful screenshots of our **CrimeWatch** application showcasing:
+## Quick Navigation ✨
 
-## Features Demonstrated
-- **Interactive Crime Heatmap** - Karnataka districts visualization
-- **Crime Type Distribution** - Bar & Pie charts by district  
-- **Responsive UI** - Modern dark theme design
-- **Contact Form** - Report suspicious activity
-- **About Page** - Project mission & data sources
+**[🏠 Home Page](#home)** | **[🔥 Heatmap](#heatmap)** | **[📊 Charts](#charts)** | **[📞 Contact](#contact)**
 
 ---
 
-## Quick Navigation
-| Screenshot | Description |
-|------------|-------------|
-| [![Home](01-homepage.jpg)](01-homepage.jpg) | Landing page with CTA |
-| [![Heatmap](02-heatmap.jpg)](02-heatmap.jpg) | Karnataka crime heatmap |
-| [![Charts](03-distribution.jpg)](03-distribution.jpg) | Crime analytics dashboard |
-| [![Contact](04-contact.jpg)](04-contact.jpg) | Report suspicious activity form |
+### 🏠 Home Page
+![Home](Screenshot-2025-05-15-191257.jpg)
+
+### 🔥 Crime Heatmap  
+![Heatmap](Screenshot-2025-05-15-191111.jpg)
+
+### 📊 Crime Charts
+![Charts](Screenshot-2025-05-15-191204.jpg)
+
+### 📞 Contact Form
+![Contact](Screenshot-2025-05-15-191406.jpg)
