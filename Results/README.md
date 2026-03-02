@@ -1,19 +1,20 @@
 # 📸 SafeCity Project Screenshots
 
-## Quick Navigation ✨
+Screenshots of **CrimeWatch** app:
 
-**[🏠 Home Page](#home)** | **[🔥 Heatmap](#heatmap)** | **[📊 Charts](#charts)** | **[📞 Contact](#contact)**
+## Gallery
 
----
-
-### 🏠 Home Page
+**🏠 Home Page**  
 ![Home](Screenshot-2025-05-15-191257.jpg)
 
-### 🔥 Crime Heatmap  
+**🔥 Crime Heatmap**  
 ![Heatmap](Screenshot-2025-05-15-191111.jpg)
 
-### 📊 Crime Charts
+**📊 Crime Distribution Charts**  
 ![Charts](Screenshot-2025-05-15-191204.jpg)
 
-### 📞 Contact Form
+**📞 Contact Form**  
 ![Contact](Screenshot-2025-05-15-191406.jpg)
+
+**ℹ️ About Page**  
+![About](Screenshot-2025-05-15-191416.jpg)
