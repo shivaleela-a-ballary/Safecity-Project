@@ -34,7 +34,7 @@ Safe City is a women’s safety web app providing **location-based safety insigh
 
 ```bash
 # Clone repo
-git clone [your-repo-url]
+git clone https://github.com/shivaleela-a-ballary/Safecity-Project.git
 
 # Open index.html in browser
 # Login with Firebase → Start exploring!
